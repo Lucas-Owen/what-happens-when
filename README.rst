@@ -28,9 +28,12 @@ Table of Contents
 The "g" key is pressed
 ----------------------
 The following sections explain the physical keyboard actions
-and the OS interrupts. When you press the key "g" the browser receives the
-event and the auto-complete functions kick in.
-Depending on your browser's algorithm and if you are in
+and the OS interrupts. When you press the key "g", a switch is closed
+and a circuit in the keyboard is completed, the CPU receives binary data
+from the IO device which is interpreted by the OS as the 'g' key.
+The OS signals the current active window (your browser) that a key has been pressed.
+The browser receives the event, displays a 'g' on the search bar, and the auto-complete
+functions kick in. Depending on your browser's algorithm and if you are in
 private/incognito mode or not various suggestions will be presented
 to you in the dropdown below the URL bar. Most of these algorithms sort
 and prioritize results based on search history, bookmarks, cookies, and
